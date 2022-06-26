@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> 
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+<!-- boot strap    -->
+<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- style sheet     -->
+<link rel = stylesheet href = "wordlist.css">
+<!-- wordlist js  -->
+<script src = wordList.js></script>
+    <!-- j query -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+  integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>word list page</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                   Spell Me
+                  </a>
+              <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Parent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+
+          </nav>
+          <div class="row" >
+                <h1 class = "title">Word Lists</h1> 
+                </div>         
+             
+            <div class="row justify-content-center">
+                    <div class="col-4 mx-auto columns " >
+                        <div class="card cardPK" style="width: 18rem;">
+                            <div class = "slider1">
+                            <img src="../../../spellmeApp/assets/pk.png" class="card-img-top" alt="...">
+                            <div class="card-body" >
+                              <h5 class="card-title kbody">Pre k</h5>
+                            </div>
+                            </div>
+                            <ul class=" pkbody list-group list-group-flush addNewPKWord">
+                            </ul>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control typeWord" placeholder="Username" aria-label="Username" >
+                                  </div>
+                              <button type="button" onClick = "addWord()"class="btn btn-outline-info addword">Add</button>
+                              <button type="button" onClick = "removeWord()"class="btn btn-light">Remove</button>
+                            </div>
+                          </div>
+                </div>
+              
+                <div class="col-4 mx-auto" style= "background-color: #801b66;">
+                                               
+                        <div class="card cardK" style="width: 18rem;">
+                            <div class = "slider2">
+                            <img src="../../../spellmeApp/assets/k.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Kindergarten</h5>
+                            </div>
+                            </div>
+                            <ul class=" kbody list-group list-group-flush addNewKWord">
+                            </ul>
+                            <div class="card-body">
+
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" >
+                              </div>
+                              <button type="button" onClick = "addWord()"class="btn btn-light addword">Add</button>
+                              <button type="button" onClick = "removeWord()"class="btn btn-light">Remove</button>
+                            </div>
+                          </div>                      
+                    
+                </div>
+                <div class="col-4 mx-auto">
+                    <div class="card cardF" style="width: 18rem;">
+                        <div class = "slider3">
+            
+                        <img src="../../../spellmeApp/assets/1gde.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">First Grade</h5>
+                        </div>
+                    </div>
+                        <ul class=" fbody list-group list-group-flush addNewFWord">
+                        </ul>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control word3" placeholder="Username" aria-label="Username" >
+                              </div>
+                              <button type="button" onClick = "addWord()"class="btn btn-light addword">Add</button>
+                              <button type="button" onClick = "removeWord()"class="btn btn-light">Remove</button>
+                        </div>
+                      </div>
+            </div>
+</div>
+    </div>
+    <scrit>
+        <script src = wordList.js></script>
+
+    </scrit>
+</body>
+</html>
