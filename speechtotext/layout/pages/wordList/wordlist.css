@@ -1,6 +1,14 @@
+body{
+    font-family: 'Indie Flower', "cursive";
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .title{
     text-align: center;
     padding:50px;
+    font-family: 'Rubik', sans-serif;
+
 }
 .card{
     text-align:center ;

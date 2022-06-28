@@ -1,27 +1,7 @@
 ;(function (){
 
 //populate list with word items
-function wordListPK(){
-    let wordlistPK = ["two", "sad", "mat", "rut", "kit", "pin", "fig", "bus", "bee", "one", "gag", "tag", "see", "car", "sob", "all", "mob", "bye", "hen", "bag", "bug", "ask"]
-    for(i = 0 ; i < wordlistPK.length ; i++){
-     let newWord = document.querySelector(".addNewPKWord");
-    let input = document.createElement("input");
-    input.setAttribute("type","checkbox");
-    input.setAttribute("value", wordlistPK[i]);
-    input.classList.add("checkbox");
-    input.id = wordlistPK[i];
-    let label = document.createElement("label");
-     let li = document.createElement('li');
-    li.className = `list-group-item ${wordlistPK[i]} `  ;
 
-    li.innerHTML = wordlistPK[i];
-    new1 = newWord.appendChild(li);
-    new2 = new1.appendChild(label);
-    new3 = new2.appendChild(input);
-    }
-    
-    
-}
 // function add(){
 // <input type="checkbox" name="bootstrap" value="bootstrap">
 // 	<label>Bootstrap</label><br><br>
@@ -55,6 +35,28 @@ function wordListKind(){
        }
        
 }
+function wordListPK(){
+    let wordlistPK = ["two", "sad", "mat", "rut", "kit", "pin", "fig", "bus", "bee", "one", "gag", "tag", "see", "car", "sob", "all", "mob", "bye", "hen", "bag", "bug", "ask"]
+    for(i = 0 ; i < wordlistPK.length ; i++){
+     let newWord = document.querySelector(".addNewPKWord");
+    let input = document.createElement("input");
+    input.setAttribute("type","checkbox");
+    input.setAttribute("value", wordlistPK[i]);
+    input.classList.add("checkbox");
+    input.id = wordlistPK[i];
+    let label = document.createElement("label");
+     let li = document.createElement('li');
+    li.className = `list-group-item ${wordlistPK[i]} `  ;
+
+    li.innerHTML = wordlistPK[i];
+    new1 = newWord.appendChild(li);
+    new2 = new1.appendChild(label);
+    new3 = new2.appendChild(input);
+    }
+    
+    
+}
+
 function wordListFir(){
     let wordlistF = ["even", "felt", "camp", "land", "few", "front", "hundred","country", "kept", "grew", "finger", "across", "feel", "cause", "enough", "center", "different", "knew", "between", "gone"]
     for(i = 0 ; i < wordlistF.length ; i++){
@@ -83,16 +85,18 @@ wordListFir();
 
 
 })();
+
 function removeWord() {
     const checkboxes = document.querySelectorAll('.checkbox:checked');
     Array.prototype.forEach.call(checkboxes, function(checkbox) {
      checkbox.closest('li').remove();
     });
  }
+ 
 //on button click add a new word to the list
- function addWord(){
-    let newWord = document.querySelector(".addNewFWord");
-    let word = document.getElementsByClassName("word3").value;
+function addWordPK(){
+    let newWord = document.querySelector(".addNewPKWord");
+    let word = document.getElementById("wordPK").value;
     let input = document.createElement("input");
    input.setAttribute("type","checkbox");
    input.setAttribute("value", word);
@@ -107,6 +111,42 @@ function removeWord() {
    new2 = new1.appendChild(label);
    new3 = new2.appendChild(input);
    }
+   function addWordK(){
+    let newWord = document.querySelector(".addNewKWord");
+    let word = document.getElementById("wordK").value;
+    let input = document.createElement("input");
+   input.setAttribute("type","checkbox");
+   input.setAttribute("value", word);
+   input.classList.add("checkbox");
+   input.id = word;
+   let label = document.createElement("label");
+    let li = document.createElement('li');
+   li.className = `list-group-item ${word} `  ;
+
+   li.innerHTML = word;
+   new1 = newWord.appendChild(li);
+   new2 = new1.appendChild(label);
+   new3 = new2.appendChild(input);
+   }
+
+ function addWordF(){
+    let newWord = document.querySelector(".addNewFWord");
+    let word = document.getElementById("wordPK").value;
+    let input = document.createElement("input");
+   input.setAttribute("type","checkbox");
+   input.setAttribute("value", word);
+   input.classList.add("checkbox");
+   input.id = word;
+   let label = document.createElement("label");
+    let li = document.createElement('li');
+   li.className = `list-group-item ${word} `  ;
+
+   li.innerHTML = word;
+   new1 = newWord.appendChild(li);
+   new2 = new1.appendChild(label);
+   new3 = new2.appendChild(input);
+   }
+   
     // let newWord = document.querySelector(".addNewWord");
     // let li = document.createElement('li');
     // li.className = "list-group-item";

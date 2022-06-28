@@ -1,0 +1,63 @@
+body{
+    font-family: 'Indie Flower', "cursive";
+    font-size: 20px;
+    font-weight: bold;
+}
+.al{
+    margin:auto
+}
+
+.img1{
+    text-align: center; 
+    
+}
+.ar{
+    text-align: right; 
+    margin: auto;
+ 
+}
+.wordIn{
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    font-weight: 600; 
+    letter-spacing: 1em;
+    text-align: center;
+  
+}
+.aa{
+    margin:auto;
+}
+#spellWord{
+   margin-top:-20px;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .5em;
+}
+.textbox1{
+    text-align: center;
+}
+
+.imgbg{
+    background-image: url("../../../spellmeApp/assets/bg1.jpg");
+  
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.displayW{
+   text-align: center;
+}
+.icon1{
+   position:relative;
+    left:160px;
+    bottom:20px;
+   
+}
+.icon2{
+     margin-right:125px;
+     position:relative;
+     bottom:20px
+}
