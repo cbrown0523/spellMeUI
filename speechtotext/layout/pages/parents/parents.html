@@ -11,7 +11,7 @@
 <!-- boot strap    -->
 <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- style sheet     -->
-<link rel = stylesheet href = "main.css">
+<link rel = stylesheet href = "parents.css">
     <!-- j query -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
@@ -23,37 +23,96 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../main/index.html">
                     <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     Bootstrap
                   </a>
               <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Parent</a>
+                    <a class="nav-link" href="../main/index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link active" aria-current="page" href="../parents/login.html">Parent</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="../register/register.html">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
+                    <a class="nav-link" href="../parents/parents.html">Parent</a>
+                  </li>s
                 </ul>
               </div>
             </div>
           </nav>
-        </div>
- <div class="container">
+        </div>  
+ <div class="container imgbg">
     <div class="grid">
+        <div class="g-col-6 g-col-md-4" >
+        <!-- <script src = 'parents.js'>  
+          document.write("Welcome ");  
+          </script>  </div> -->
+        
+          <h1 class = 'title1'>Welcome</h1>
+        <div class="g-col-6 g-col-md-4" >  
+          <div class = "container">
+            <div class="row align-items-start main">
+              <div class="col col-md-4 ">
+              <p style = "text-align: center;">Learners</p>
+                    <ul class="list-group rounded-0 list1" style = "text-align: center";>
+                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
+                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Mary</li></a>
+                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
+                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
+                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
+                    </ul>
+              
+                
+              </div>
+              <div class="col-md-4 offset-md-2">
+                <form class =' form1'>
+                  <div class="row mb-3">
+                    <p class = "learnerTitle">Add Learner</p>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                      <input type="grade" class="form-control rounded-0" id="inputGrade">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="inputGrade" class="col-sm-2 col-form-label">Grade</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control rounded-0" id="inputGrade">
+                    </div>
+                  </div>
+                  <fieldset class="row mb-3">
+                    <label for=" wordList" class="col-sm-2 col-form-label">Word Lists</label>
+                    <div class="col-sm-10">
+                      
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                          Pre Select
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                         Random Word
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <button type="submit" class="btn btn-primary">Add learner</button>
+                </form>
+              </div>
+          
+    </div>
         <div class="g-col-6 g-col-md-4" style= "background-color: #1ca823;">.g-col-6 .g-col-md-4</div>
-        <div class="g-col-6 g-col-md-4" style= "background-color: #911672;">.g-col-6 .g-col-md-4</div>
-        <div class="g-col-6 g-col-md-4" style= "background-color: #1ca823;">.g-col-6 .g-col-md-4</div>
+        
       </div>
    
 </div>
+
   
 </body>
 </html>

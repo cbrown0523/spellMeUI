@@ -76,3 +76,10 @@ body{
 .usernme > a > p:hover {
     color: rgb(253, 137, 4)
   }
+
+ 
+#img2:hover {
+    border: 5px solid rgba(184, 223, 14, 0.973);
+    overflow: hidden;
+}
+

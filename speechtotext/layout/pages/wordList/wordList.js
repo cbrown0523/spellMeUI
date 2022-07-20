@@ -1,4 +1,4 @@
-;(function (){
+(function (){
 
 //populate list with word items
 
@@ -56,7 +56,7 @@ function wordListPK(){
     
     
 }
-
+//db
 function wordListFir(){
     let wordlistF = ["even", "felt", "camp", "land", "few", "front", "hundred","country", "kept", "grew", "finger", "across", "feel", "cause", "enough", "center", "different", "knew", "between", "gone"]
     for(i = 0 ; i < wordlistF.length ; i++){
@@ -131,7 +131,7 @@ function addWordPK(){
 
  function addWordF(){
     let newWord = document.querySelector(".addNewFWord");
-    let word = document.getElementById("wordPK").value;
+    let word = document.getElementById("wordF").value;
     let input = document.createElement("input");
    input.setAttribute("type","checkbox");
    input.setAttribute("value", word);

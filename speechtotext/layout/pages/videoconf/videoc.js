@@ -11,3 +11,7 @@
         
    
 <script src="//cdn.metered.ca/sdk/video/1.4.3/sdk.min.js"></script> */}
+
+
+// npm install -g live-server
+// $ live-server --port=8000

@@ -23,29 +23,29 @@
 </head>
 <body>
     <audio id="audio">
-        <source src="./assets/mouseclick.mp3" type="audio/mp3"></source>
+        <source src="../../../assets/mouseclick.mp3" type="audio/mp3"></source>
     </audio>
     <div class="container">
     
         <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="main.html">
                     <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     Bootstrap
                   </a>
               <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Parent</a>
+                    <a class="nav-link active" aria-current="page" href="../parents/login.html">Parent</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="../register/register.html">Register</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link " href = "../wordList/wordList.html " >Word List</a>
                   </li>
                 </ul>
               </div>
@@ -66,24 +66,35 @@
                 <a><p>amy </p></a>
             </div>
             </div>  
-                <img class= "note" src = "./assets/note1.jpg" width="250em">
+                <img class= "note" src = "../../../assets/note1.jpg" width="250em">
                
-            <img src="./assets/pencil1.png" id = "img1" height="200px">
+            <img src="../../../assets/pencil1.png" id = "img1" height="200px">
             </div>
         </div>
         </div>
             <div class="col-9" style= "background-color: #1ca823;">
                 <h1 class="title">Grow. Explore. Discover </h1>
 
-           <a><img src = "./assets/abcblock.jpg" id= "img2" height = "300em"></a>
+           <a href = "../spellme/spellme.html"><img src = "../../../assets/abcblock.jpg" id= "img2" height = "300em"></a>
            <div class = "jqueryelm">
-          <a> <img src = "./assets/arrow.png" id = "jqueryimg1" height = "100px" width = "100px" >  </a> 
+          <a> <img src = "../../../assets/arrow.png" id = "jqueryimg1" height = "100px" width = "100px" >  </a> 
 </div>
 </div>
         </div>
             
       </div>
+      <div id="metered-frame"></div>
+
+
 </div>
+<script src="https://cdn.metered.ca/sdk/frame/1.4.2/sdk-frame.min.js"></script>
+<script>
+    var frame = new MeteredFrame(); 
+    frame.init({
+        roomURL: "spellme.metered.live/spellme2",
+    }, document.getElementById("metered-frame"));
+</script>
+
 <script> 
   
   $(document).ready(function(){
@@ -111,6 +122,9 @@ $("a").click(function() {
 });
     });
     </script>
+    
+
+
       
 </body>
 </html>

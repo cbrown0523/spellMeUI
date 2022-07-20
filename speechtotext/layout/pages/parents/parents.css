@@ -1,0 +1,55 @@
+/* body{
+    font-family: 'Indie Flower', cursive;
+} */
+.title1{
+    text-align: center;
+}
+.user_name{
+    position:relative;
+
+   
+}
+.user_list{
+    margin: auto;
+    
+}
+.nmeList{
+    position:relative;
+    top:100px;
+   left: 100px;
+    
+}
+.usernme{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.usernme > a > p:hover {
+    color: rgb(253, 137, 4)
+  }
+.float1{
+    margin-left:-200px;
+}
+.learnerTitle{
+    text-align: center;
+}
+.list-group{
+    width: 150px;
+}
+.form1{
+    width:300px;
+    
+}
+.list1{
+    margin:auto;
+}
+.list1 :hover {
+    border: 5px solid rgba(184, 223, 14, 0.973);
+    overflow: hidden;
+}
+.title1{
+   padding:50px;
+}
+.main{
+    padding:50px;
+}
