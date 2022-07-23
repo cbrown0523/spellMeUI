@@ -16,8 +16,11 @@
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
   crossorigin="anonymous"></script>
+<!-- jquery validate -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>parents page</title>
+  <script src = parents.js></script> 
+  <title>parents page</title>
 </head>
 <body>
     <div class="container">
@@ -58,30 +61,28 @@
           <div class = "container">
             <div class="row align-items-start main">
               <div class="col col-md-4 ">
+
               <p style = "text-align: center;">Learners</p>
-                    <ul class="list-group rounded-0 list1" style = "text-align: center";>
+                    <ul class="list-group rounded-0 list1" id = "list1" style = "text-align: center";>
                       <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
                       <a style = "text-decoration: none;" href = ""><li class="list-group-item">Mary</li></a>
-                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
-                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
-                      <a style = "text-decoration: none;" href = ""><li class="list-group-item">Amy</li></a>
                     </ul>
               
                 
               </div>
               <div class="col-md-4 offset-md-2">
-                <form class =' form1'>
+                <form class =' form1 ' id="form1">
                   <div class="row mb-3">
                     <p class = "learnerTitle">Add Learner</p>
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                      <input type="grade" class="form-control rounded-0" id="inputGrade">
+                      <input type="text" class="form-control rounded-0" minlength = "2" id = "name" required>
                     </div>
                   </div>
                   <div class="row mb-3">
-                    <label for="inputGrade" class="col-sm-2 col-form-label">Grade</label>
+                    <label for="inputGrade" class="col-sm-2 col-form-label" >Grade</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control rounded-0" id="inputGrade">
+                      <input type="text" class="form-control rounded-0" id ="grade" required>
                     </div>
                   </div>
                   <fieldset class="row mb-3">
@@ -102,17 +103,18 @@
                       </div>
                     </div>
                   </fieldset>
-                  <button type="submit" class="btn btn-primary">Add learner</button>
+                  <button type="submit" id = "add" class="btn btn-primary" >Add learner</button>
                 </form>
+                <div id="feedback"></div>
               </div>
           
     </div>
         <div class="g-col-6 g-col-md-4" style= "background-color: #1ca823;">.g-col-6 .g-col-md-4</div>
         
       </div>
+      <div>
    
 </div>
 
-  
 </body>
 </html>

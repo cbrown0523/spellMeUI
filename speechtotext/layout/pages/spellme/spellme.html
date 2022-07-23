@@ -17,7 +17,8 @@
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
   crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>spell me page</title>
+  <script src = spellme.js></script>  
+  <title>spell me page</title>
 </head>
 <body>
     <div class="container">
@@ -48,10 +49,11 @@
           <div class="container ">
   <div class="row  my-5 "  >
     <div class="col al ">
-     <img class = "" src = "../../../assets/al.png" height = "100px" width = "100px;">
+     <img id = "" src = "../../../assets/al.png" height = "100px" width = "100px;">
     </div>
  
-    <div class="col-6 img1 border border-5 border-dark">
+    <div class="col-6 img1 border border-5 border-dark"  >
+      <div class = 'img2'></div>
       <img src = "../../../assets/apple.jpg" height = "300px" width = "300px;">
     </div>
     <div class="col ar ">
@@ -74,7 +76,9 @@
        <img id="icon2" src = "../../../spellmeApp/assets/aid.png" width = "60px" height = "60px"></div> -->
     <div class = "col ">
       <img class = "icon1" id="icon1" src = "../../../assets/aid.png" width = "50px" height = "50px">
-      <img class = "icon2" id="icon1" src = "../../../assets/mp.png" width = "50px" height = "50px">
+      
+        <img onclick="say()" class = "icon2" id="icon2" src = "../../../assets/mp.png" width = "50px" height = "50px"> 
+      
     </div>
   </div>
   <div class= "imgbg">
@@ -84,7 +88,7 @@
     </div>
     <div class="col-6  ">
       <div class="form-floating mb-3  textbox1">
-        <input type="text" class=" form-control-sm wordIn" id="floatingInput" placeholder="word">
+        <input oninput="myFunction1()" type="text" class=" form-control-sm wordIn" id="floatingInput" placeholder="word"/>
         <label for="floatingInput"></label>
       </div>
     </div>
@@ -97,7 +101,7 @@
   </div>
 </div>
     </div>
-    
+   
      
 </body>
 </html>

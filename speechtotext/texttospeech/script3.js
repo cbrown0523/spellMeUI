@@ -20,3 +20,22 @@ e.preventDefault();
 speak(text.value);
 });
 
+
+
+
+$.ajax({
+    method: "GET",
+    url: 'http://localhost:8080/image/' ,
+    // url: "http://localhost:8080/image/?q=cat",
+    data: { 
+        "q" : "book"
+    },
+}).done(function(data){
+    console.log(data);
+    $.map(data, function(i , image){
+        // $('.img3').append($('<img />').attr('src', image.thumbnail));
+        $('.img2').append( '<img src= "http://localhost:8080/image/"  image.thumbnail + ">');
+       // $('.img2').append($("<img src= 'http://localhost:8080/image/' + image[0].thumbnail " + ">" ))
+    })
+})
+
