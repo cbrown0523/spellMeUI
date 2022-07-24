@@ -1,6 +1,7 @@
 let words = [];
 let count = 0
 
+
 //get api/terms
 $.ajax({
     method:'GET',
@@ -11,10 +12,12 @@ $.ajax({
      words = data;
     $('#spellWord').html( "<p id = 'spellWord'>"+ words[count].term  +"</p>")  
     })
+   
     $(document).ready(function(){
         $(".ar").click(function(){
             count++
         console.log(count)
+        $('form').trigger("reset");
         $('#spellWord').html( "<p id = 'spellWord'>"+ words[count].term  +"</p>")  
         });
        });
@@ -22,8 +25,8 @@ $.ajax({
     $(document).ready(function(){
     $(".al").click(function(){
       count--
-      
        console.log(count)
+       $('form').trigger("reset");
        $('#spellWord').html( "<p id = 'spellWord'>"+ words[count].term  +"</p>")  
       });
     });
@@ -31,30 +34,39 @@ $.ajax({
 
 //on horn button click text to speech word
 
-function say(){
-    let txtInput = document.getElementById("floatingInput").value;
-    let speech = document.getElementById("icon2");
-    let message = new SpeechSynthesisUtterance();
-    message.pitch = 10;
-    message.rate = 2;
-    message.text = txtInput;
-    window.speechSynthesis.speak(message)
+
+
+function submitForm() {
+   //document.formu1.submit();
+   // document.form.reset();
+
     }
-
-    // As New SpeechSynthesizer()
-
-    //text to speech read characters input
-function myFunction1() {
-    let wordBox = document.getElementById("floatingInput").value;
-    let message = new SpeechSynthesisUtterance()
-    for(let i = 0 ; i < wordBox.length; i++){
-    message.text = wordBox[i];
-    }
-window.speechSynthesis.speak(message)
-
-}
-
-
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+             //e.preventDefault();
+          
+          var formData = {
+            word: $("#floatingInput").val(),
+            sampleWord:  words[count].term
+          
+          };
+        event.preventDefault()
+        $(".wordIn").empty();
+          $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/api/spell/",
+            data: formData,
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            dataType: "json",
+            encode: true,
+          }).done(function (data) {
+            console.log(data);
+          });
+      
+         
+        });
+      });
 
 // $.ajax({
 //     method:'GET',

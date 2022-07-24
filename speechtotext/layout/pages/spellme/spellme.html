@@ -16,6 +16,8 @@
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
   crossorigin="anonymous"></script>
+  <script src = "spellMeUtterence.js"></script>
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src = spellme.js></script>  
   <title>spell me page</title>
@@ -31,7 +33,7 @@
               <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Parent</a>
+                    <a class="nav-link active" aria-current="page" href="../parents/parents.html">Parent</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Register</a>
@@ -47,8 +49,8 @@
             </div>
           </nav>
           <div class="container ">
-  <div class="row  my-5 "  >
-    <div class="col al ">
+  <div class="row  my-4 "  >
+    <div class="col al " onclick="submitForm()">
      <img id = "" src = "../../../assets/al.png" height = "100px" width = "100px;">
     </div>
  
@@ -56,7 +58,7 @@
       <div class = 'img2'></div>
       <img src = "../../../assets/apple.jpg" height = "300px" width = "300px;">
     </div>
-    <div class="col ar ">
+    <div class="col ar " onclick="submitForm()" >
       <img  class =" " src = "../../../assets/ar.png"  height = "100px" width = "100px;">
     </div>
   </div>
@@ -87,10 +89,12 @@
       1 of 3
     </div>
     <div class="col-6  ">
+      <form  id ="formu1"  >
       <div class="form-floating mb-3  textbox1">
-        <input oninput="myFunction1()" type="text" class=" form-control-sm wordIn" id="floatingInput" placeholder="word"/>
+        <input oninput="myFunction1()"  type="text" autocomplete="off" class=" form-control-sm wordIn" id="floatingInput" autofocus style="background-color: aqua;"/>
         <label for="floatingInput"></label>
-      </div>
+  </div>
+    </form>
     </div>
     <div class="col-3">
       1 of 3
@@ -101,7 +105,7 @@
   </div>
 </div>
     </div>
-   
+  <script></script>
      
 </body>
 </html>

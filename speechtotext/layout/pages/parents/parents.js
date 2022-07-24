@@ -46,6 +46,7 @@ $(document).ready(function () {
         dataType: "json",
         encode: true,
       }).done(function (data) {
+        $('#list1').trigger("reset");
         console.log(data);
       });
   
@@ -54,7 +55,7 @@ $(document).ready(function () {
   });
 
   //ok
-// $(document).ready(function () {
+//  $(document).ready(function () {
 
 //     $("#form1").submit(function (event) {
 //         event.preventDefault();
@@ -64,7 +65,7 @@ $(document).ready(function () {
 
 // });
 
-  // function ajaxSubmit() {
+//   function ajaxSubmit() {
 
 //     let field = {}
 //    field["name"] = $("#name").val();
@@ -72,9 +73,9 @@ $(document).ready(function () {
 //     $("#add").prop("disabled", true);
 
 //     $.ajax({
-//         type: "POST",
+//         type: "GET",
 //         contentType: "application/json",
-//         url: "http://localhost:8080/api/learner/",
+//         url: "http://localhost:8080/api/learner/all",
 //         data: JSON.stringify(field),
 //         dataType: 'json',
 //         cache: false,
