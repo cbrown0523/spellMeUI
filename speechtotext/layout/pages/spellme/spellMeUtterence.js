@@ -10,8 +10,8 @@ const lastVoice = voices[voices.length - 1];
 
 message.voice = lastVoice; // change voice
 
-message.pitch = 1.8;
-message.rate = .8;
+// message.pitch = .5;
+// message.rate = .1;
 message.text = txtInput;
 window.speechSynthesis.speak(message)
 }
