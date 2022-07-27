@@ -39,9 +39,8 @@ body{
 }
 
 .imgbg{
-    background-image: url("../../../spellmeApp/assets/bg1.jpg");
-  
-   
+    background-image: url("/speechtotext/assets/bg1.jpg");
+    height:200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,3 +60,7 @@ body{
      position:relative;
      bottom:20px
 }
+.defTxt{
+    text-align: center;
+}
+
