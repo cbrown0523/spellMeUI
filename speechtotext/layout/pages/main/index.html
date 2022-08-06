@@ -29,11 +29,11 @@
     </audio>
     <div class="container">
     
-        <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+        <nav class="navbar navbar-expand-lg footer1" style= "background-color: #f0bfdf;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../main/index.html">
                     <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    Bootstrap
+                    Spell Me
                   </a>
               <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
                 <ul class="navbar-nav ">
@@ -86,20 +86,21 @@
         </div>
             
       </div>
-      <div id="metered-frame"></div>
+    
 
-
+      <div class = "footer1">
+        <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+          <div class="container-fluid">
+            <p>Spell Me</p>
+              <p>@Copyright : Christine Brown </p>
+              <span>Created 2022</span>
+            
+          </div>
+        </nav>
+   
 </div>
-<script src="https://cdn.metered.ca/sdk/frame/1.4.2/sdk-frame.min.js"></script>
+</div>
 <script>
-    var frame = new MeteredFrame(); 
-    frame.init({
-        roomURL: "spellme.metered.live/spellme2",
-    }, document.getElementById("metered-frame"));
-</script>
-
-<script> 
-  
   $(document).ready(function(){
       setInterval(() => {
           var div = $("#jqueryimg1");

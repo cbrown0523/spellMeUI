@@ -86,6 +86,165 @@ wordListFir();
 
 })();
 
+// $(document).ready(function () { 
+//   var sThisVal;
+// $(".removeF").click(function (event) {
+//   $('input.checkbox:checkbox:checked').each(function () {
+//    sThisVal = $(this).val();
+// });
+//       //e.preventDefault();
+//      let formData = {
+//         term: sThisVal,
+//       };
+// event.preventDefault()
+// $(".wordIn").empty();
+//   $.ajax({
+//     type: "DELETE",
+//     url: "http://localhost:8080/api/term/delete/words" ,
+//     data: term,
+//     contentType: "application/json",
+//     data: JSON.stringify(formData),
+//     dataType: "json",
+//     encode: true,
+//   }).done(function (data) {
+//     console.log(data);
+//     console.log(data);
+//   });
+
+// });
+// });
+// $(document).ready(function () {
+//   $(".removeK").click(function (event) {
+//         //e.preventDefault();
+//         var $li = $(this);
+//     //  let formData = {
+//     //     term: $('input[type=checkbox]:checked').val(),
+//     //   };
+//   event.preventDefault()
+
+//     $.ajax({
+//       type: "DELETE",
+//       url: "http://localhost:8080/api/term/delete/word/" ,
+//       data: $li,
+//       contentType: "application/json",
+//      data: JSON.stringify($li),
+//       dataType: "json",
+//       encode: true,
+//     }).done(function (data) {
+//       console.log(formData.term);
+//       console.log(formData.term);
+
+//     });
+
+//   });
+// });
+
+// //getting cors error 
+// $(document).ready(function () { 
+//   //use word even example
+//   $("#camp").click(function (event) {
+//       //e.preventDefault();
+//     var $li = $(this);
+//     //  let formData = {
+//     //     term: sThisVal,
+//     //   };
+// event.preventDefault()
+
+//   $.ajax({
+//     type: "DELETE",
+//     url: "http://localhost:8080/api/term/delete/words" ,
+//     data: $li,
+//     contentType: "application/json",
+//    data: JSON.stringify($li),
+//     dataType: "json",
+//     encode: true,
+//   }).done(function (data) {
+//     console.log(data);
+//     console.log($div);
+//   });
+
+// });
+// });
+
+
+
+
+$(document).ready(function () {
+  $(".addWordF").click(function (event) {
+        //e.preventDefault();
+    
+    var formData = {
+      term: $("#wordF").val(),
+      grade: "firstgrade"
+   
+    };
+  event.preventDefault()
+ $(".wordIn").empty();
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:8080/api/term/",
+      data: formData,
+      contentType: "application/json",
+      data: JSON.stringify(formData),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(data);
+    });
+
+  });
+});
+$(document).ready(function () {
+  $(".addWord").click(function (event) {
+        //e.preventDefault();
+    
+    var formData = {
+      term: $("#wordK").val(),
+      grade: "kindergarten"
+    };
+  event.preventDefault()
+ $(".wordIn").empty();
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:8080/api/term/",
+      data: formData,
+      contentType: "application/json",
+      data: JSON.stringify(formData),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(data);
+    });
+
+  });
+});
+$(document).ready(function () {
+  $(".addWordPk").click(function (event) {
+        //e.preventDefault();
+    
+    var formData = {
+      term: $("#wordPK").val(),
+      grade: "preK"
+   
+    };
+  event.preventDefault()
+ $(".wordIn").empty();
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:8080/api/term/",
+      data: formData,
+      contentType: "application/json",
+      data: JSON.stringify(formData),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(data);
+    });
+
+  });
+});
+
+
 function removeWord() {
     const checkboxes = document.querySelectorAll('.checkbox:checked');
     Array.prototype.forEach.call(checkboxes, function(checkbox) {
@@ -175,13 +334,14 @@ $(document).ready(function(){
       $(".addNewFWord").slideToggle("slow");
     });
   });
-  $(document).ready(function(){
-    $(".cardF").onload(function(){
-      $(".addNewFWord").hide("slow");
-    });
-  });
+  // $(document).ready(function(){
+  //   $(".cardF").onload(function(){
+  //     $(".addNewFWord").hide("slow");
+  //   });
+  // });
   $('li').click( function() {
     $(this).attr("checked", true);
 });
+
 
 

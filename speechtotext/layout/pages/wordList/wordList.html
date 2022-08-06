@@ -23,7 +23,7 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+        <nav class="navbar navbar-expand-lg footer1" style= "background-color: #f0bfdf;">
             <div class="container-fluid" >
                 <a class="navbar-brand" href="../main/index.html">
                     <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -50,12 +50,12 @@
               </div>
 
           </nav>
-          <div class = "container"  >
+          <div class = "container" >
           <div class="row" >
                 <h1 class = "title">Word Lists</h1> 
                 </div>         
              
-            <div class="row justify-content-center">
+            <div class="row justify-content-center text">
                     <div class="col-4 mx-auto columns " >
                         <div class="card cardPK" style="width: 18rem;">
                             <div class = "slider1">
@@ -70,8 +70,8 @@
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control "  id="wordPK"  aria-label="Username" >
                                   </div>
-                              <button type="button" onClick = "addWordPK()"class="btn btn-outline-info addwordPK">Add</button>
-                              <button type="button" onClick = "removeWord()"class="btn btn-light">Remove</button>
+                              <button type="button" onClick = "addWordPK()"class="btn btn-outline-info addwordPk">Add</button>
+                              <button type="button" onClick = "removeWord()"class="btn btn-light removePk">Remove</button>
                             </div>
                           </div>
                 </div>
@@ -93,7 +93,7 @@
                                 <input type="text" class="form-control"  id="wordK"  aria-label="Username" >
                               </div>
                               <button type="button" onClick = "addWordK()"class="btn btn-light addword">Add</button>
-                              <button type="button" onClick = "removeWord()"class="btn btn-light">Remove</button>
+                              <button type="button" onClick = "removeWord()"class="btn btn-light removeK">Remove</button>
                             </div>
                           </div>                      
                     
@@ -113,8 +113,8 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" id="wordF" aria-label="Username" >
                               </div>
-                              <button type="button" onClick = "addWordF()"class="btn btn-light addword">Add</button>
-                              <button type="button" onClick = "removeWord()"class="btn btn-light">Remove</button>
+                              <button type="button" onClick = "addWordF()"class="btn btn-light addwordF">Add</button>
+                              <button type="button" onClick = "removeWord()"class="btn btn-light removeFg">Remove</button>
                         </div>
                       </div>
             </div>
@@ -123,5 +123,16 @@
 <div id="metered-frame"></div>
 
    <script src = wordList.js></script>
+   <div class = "footer1">
+    <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+      <div class="container-fluid">
+        <p>Spell Me</p>
+          <p>@Copyright : Christine Brown </p>
+          <span>Created 2022</span>
+        
+      </div>
+    </nav>
+
+</div>
 </body>
 </html>

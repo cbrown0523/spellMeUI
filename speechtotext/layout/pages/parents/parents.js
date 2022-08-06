@@ -1,15 +1,15 @@
 
 $.ajax({
-    method:'GET',
-    url: 'http://localhost:8080/api/learner/all',
-    dataType: 'json'
+  method:'GET',
+  url: 'http://localhost:8080/api/learner/all',
+  dataType: 'json'
 }).done(function(data){
-    console.log(data);
-    $.map(data, function(learners , i ){
-        $('#list1').append("<a style = 'text-decoration: none;' href = ''><li class='list-group-item'>" + learners.name + "</li></a>"
-        )
-       })
-    
+  console.log(data);
+  $.map(data, function(learners , i ){
+      $('#list1').append("<a style = 'text-decoration: none;' href = ''><li class='list-group-item'>" + learners.name + "</li></a>"
+      )
+     })
+  
 })
 
 //if name is clicked how get the id and use as path param for endpoint
@@ -21,7 +21,7 @@ $.ajax({
 // }).done(function(data){
 //     console.log(data);
 //     $.map(data, function(learners , i ){
-    
+  
 //         $('#list1').append("<a style = 'text-decoration: none;' href = ''><li class='list-group-item'>" + learners.name + "</li></a>"
 //         )
 
@@ -31,30 +31,30 @@ $.ajax({
 
 
 $(document).ready(function () {
-    $("form").submit(function (event) {
-      var formData = {
-        name: $("#name").val(),
-        email: $("#grade").val()
-      };
-  
-      $.ajax({
-        type: "POST",
-        url: "http://localhost:8080/api/learner/",
-        data: formData,
-        contentType: "application/json",
-        data: JSON.stringify(formData),
-        dataType: "json",
-        encode: true,
-      }).done(function (data) {
-        $('#list1').trigger("reset");
-        console.log(data);
-      });
-  
-     
-    });
-  });
+  $("form").submit(function (event) {
+    var formData = {
+      name: $("#name").val(),
+      email: $("#grade").val()
+    };
 
-  //ok
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:8080/api/learner/",
+      data: formData,
+      contentType: "application/json",
+      data: JSON.stringify(formData),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      $('#list1').trigger("reset");
+      console.log(data);
+    });
+
+   
+  });
+});
+
+//ok
 //  $(document).ready(function () {
 
 //     $("#form1").submit(function (event) {

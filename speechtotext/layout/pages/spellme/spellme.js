@@ -19,6 +19,14 @@ $(document).ready(function(){
   $(".ar").click(function(){
     console.log(words[++count]["term"] )
     console.log("up" + count)
+   
+    if ($("form").val().length !=0){
+      words_attempted = true;
+    } else {
+        words_attempted = "false"
+      }
+  
+    
     $('form').trigger("reset");
     $('#spellWord').html( "<p id = 'spellWord'>"+ words[count]["term"]  +"</p>")  
 
