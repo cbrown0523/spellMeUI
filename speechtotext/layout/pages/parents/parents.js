@@ -1,4 +1,3 @@
-
 $.ajax({
   method:'GET',
   url: 'http://localhost:8080/api/learner/all',
@@ -31,10 +30,10 @@ $.ajax({
 
 
 $(document).ready(function () {
-  $("form").submit(function (event) {
+  $("form").submit(function(event) {
     var formData = {
       name: $("#name").val(),
-      email: $("#grade").val()
+      grade: $("#grade").val()
     };
 
     $.ajax({
@@ -103,3 +102,20 @@ $(document).ready(function () {
 //     });
 
 //  }
+
+$(".list-group-item").dblclick(function (event) {
+  let name = $(this).attr('.list-group-item');
+$.ajax({
+    type: "DELETE",
+    url: "http://localhost:8080/api/learner/delete/name/?name=" + name,
+    contentType: "application/json",
+    data: name,
+    dataType: "json",
+    encode: true,
+  }).done(function (data) {
+    $('#list1').trigger("reset");
+    console.log(data);
+  });
+
+
+});

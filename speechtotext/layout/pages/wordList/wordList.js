@@ -16,42 +16,36 @@
 // };
 
 function wordListKind(){
-    let wordlistK = ["make", "they", "too", "jump", "move", "run", "two", "again", "help", "new", "there", "she", "so", "soon", "that", "there", "use", "could", "live", "one", "then", "three"]
-    for(i = 0 ; i < wordlistK.length ; i++){
+  let wordlistK = ["two", "sad", "mat", "rut", "kit", "pin", "fig", "bus", "bee", "one", "gag", "tag", "see", "car", "sob", "all", "mob", "bye", "hen", "bag", "bug", "ask"]
+  for(i = 0 ; i < wordlistK.length ; i++){
         let newWord = document.querySelector(".addNewKWord");
        let input = document.createElement("input");
        input.setAttribute("type","checkbox");
        input.setAttribute("value", wordlistK[i]);
-       input.classList.add("checkbox");
        input.id = wordlistK[i];
-       let label = document.createElement("label");
         let li = document.createElement('li');
        li.className = `list-group-item ${wordlistK[i]} `  ;
    
        li.innerHTML = wordlistK[i];
-       new1 = newWord.appendChild(li);
-       new2 = new1.appendChild(label);
-       new3 = new2.appendChild(input);
+      new1 = newWord.appendChild(li);
+       new2 = new1.appendChild(input);
        }
-       
-}
+       }
+      
+
 function wordListPK(){
-    let wordlistPK = ["two", "sad", "mat", "rut", "kit", "pin", "fig", "bus", "bee", "one", "gag", "tag", "see", "car", "sob", "all", "mob", "bye", "hen", "bag", "bug", "ask"]
-    for(i = 0 ; i < wordlistPK.length ; i++){
+  let wordlistPK = ["make", "they", "too", "jump", "move", "run", "two", "again", "help", "new", "there", "she", "so", "soon", "that", "there", "use", "could", "live", "one", "then", "three"]
+  for(i = 0 ; i < wordlistPK.length ; i++){
      let newWord = document.querySelector(".addNewPKWord");
     let input = document.createElement("input");
     input.setAttribute("type","checkbox");
     input.setAttribute("value", wordlistPK[i]);
-    input.classList.add("checkbox");
     input.id = wordlistPK[i];
-    let label = document.createElement("label");
      let li = document.createElement('li');
     li.className = `list-group-item ${wordlistPK[i]} `  ;
-
     li.innerHTML = wordlistPK[i];
     new1 = newWord.appendChild(li);
-    new2 = new1.appendChild(label);
-    new3 = new2.appendChild(input);
+     new2 = new1.appendChild(input);
     }
     
     
@@ -64,19 +58,14 @@ function wordListFir(){
        let input = document.createElement("input");
        input.setAttribute("type","checkbox");
        input.setAttribute("value", wordlistF[i]);
-       input.classList.add("checkbox");
        input.id = wordlistF[i];
-       let label = document.createElement("label");
         let li = document.createElement('li');
        li.className = `list-group-item ${wordlistF[i]} `  ;
-   
        li.innerHTML = wordlistF[i];
        new1 = newWord.appendChild(li);
-       new2 = new1.appendChild(label);
-       new3 = new2.appendChild(input);
+       new2 = new1.appendChild(input);
        }
-       
-    
+  
 }
 
 wordListPK();
@@ -85,59 +74,188 @@ wordListFir();
 
 
 })();
+ //remove checked first grade
+$(document).ready(function () { 
 
+$(".removeFg").click(function (event) {
+ let term = $("input:checkbox:checked").val()
+ $("input:checkbox:checked").closest("li").remove();
+ console.log("ok")
+      //e.preventDefault();
+    
+//event.preventDefault()
+$(".wordIn").empty();
+  $.ajax({
+    type: "DELETE", 
+    data: term,
+    url: "http://localhost:8080/api/term/delete/word/" + term ,
+   
+    contentType: "application/json",
+    data: JSON.stringify(term),
+    dataType: "json",
+    encode: true,
+  }).done(function (data) {
+    console.log(data);
+ 
+  });
+  
+
+});
+});
+
+//remove checked kind
 // $(document).ready(function () { 
-//   var sThisVal;
-// $(".removeF").click(function (event) {
-//   $('input.checkbox:checkbox:checked').each(function () {
-//    sThisVal = $(this).val();
-// });
-//       //e.preventDefault();
-//      let formData = {
-//         term: sThisVal,
-//       };
-// event.preventDefault()
-// $(".wordIn").empty();
-//   $.ajax({
-//     type: "DELETE",
-//     url: "http://localhost:8080/api/term/delete/words" ,
-//     data: term,
-//     contentType: "application/json",
-//     data: JSON.stringify(formData),
-//     dataType: "json",
-//     encode: true,
-//   }).done(function (data) {
-//     console.log(data);
-//     console.log(data);
+
+//   $(".removeK").click(function (event) {
+//    let term = $("input:checkbox:checked").val()
+//    console.log("ok")
+//    alert($("input:checkbox:checked").val())
+//   $(".wordIn").empty();
+//     $.ajax({
+//       type: "DELETE", 
+//       data: term,
+//       url: "http://localhost:8080/api/term/delete/word/" + term ,
+     
+//       contentType: "application/json",
+//       data: JSON.stringify(term),
+//       dataType: "json",
+//       encode: true,
+//     }).done(function (data) {
+//       console.log(data);
+   
+//     });
+  
+//   });
 //   });
 
-// });
-// });
+  //remove checked prek
+  $(document).ready(function () { 
+
+    $(".removePk").click(function (event) {
+     let term3 = $("input:checkbox:checked").val()
+     $("input:checkbox:checked").closest("li").remove();
+     event.preventDefault();
+    $(".wordIn").empty();
+      $.ajax({
+        type: "DELETE", 
+        data: term3,
+        url: "http://localhost:8080/api/term/delete/word/" + term3 ,
+       
+        contentType: "application/json",
+        data: JSON.stringify(term3),
+        dataType: "json",
+        encode: true,
+      }).done(function (data) {
+        console.log(data);
+     
+      });
+    
+    });
+    });
+
 // $(document).ready(function () {
 //   $(".removeK").click(function (event) {
 //         //e.preventDefault();
-//         var $li = $(this);
+//        // var $li = $(this);
+// let term ="one"
+
+
 //     //  let formData = {
-//     //     term: $('input[type=checkbox]:checked').val(),
+//     //     //term: $('input[type=checkbox]:checked').val()
+//     //     term: "#then"
 //     //   };
-//   event.preventDefault()
+//   //event.preventDefault()
 
 //     $.ajax({
 //       type: "DELETE",
-//       url: "http://localhost:8080/api/term/delete/word/" ,
-//       data: $li,
+    
+//       url: "http://localhost:8080/api/term/delete/word/" + term ,
+//         data: term,
 //       contentType: "application/json",
-//      data: JSON.stringify($li),
+//      data: JSON.stringify(term),
 //       dataType: "json",
 //       encode: true,
 //     }).done(function (data) {
 //       console.log(formData.term);
-//       console.log(formData.term);
-
 //     });
 
 //   });
 // });
+
+//kindergarten delete
+$(document).ready(function () {
+  $(".removeK").click(function (event) {
+
+let term = $("#wordK").val()
+
+console.log("ok")
+   
+    $.ajax({
+      type: "DELETE",
+    
+      url: "http://localhost:8080/api/term/delete/word/" + term ,
+        data: term,
+      contentType: "application/json",
+     data: JSON.stringify(term),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(formData.term);
+    });
+
+  });
+});
+
+//prek delete
+$(document).ready(function () {
+  $(".removePk").click(function (event) {
+        //e.preventDefault();
+       // var $li = $(this);
+let term = $("#wordPK").val()
+    //  let formData = {
+    //     //term: $('input[type=checkbox]:checked').val()
+    //     term: "#then"
+    //   };
+  //event.preventDefault()
+
+    $.ajax({
+      type: "DELETE",
+    
+      url: "http://localhost:8080/api/term/delete/word/" + term ,
+        data: term,
+      contentType: "application/json",
+     data: JSON.stringify(term),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(formData.term);
+    });
+
+  });
+});
+
+//delete firstgrade
+$(document).ready(function () {
+  $(".removeFg").click(function (event) {
+let term = $("#wordF").val()
+  
+    $.ajax({
+      type: "DELETE",
+    
+      url: "http://localhost:8080/api/term/delete/word/" + term ,
+        data: term,
+      contentType: "application/json",
+     data: JSON.stringify(term),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(formData.term);
+      
+    });
+
+  });
+});
+
 
 // //getting cors error 
 // $(document).ready(function () { 
@@ -167,7 +285,34 @@ wordListFir();
 // });
 
 
+$(document).ready(function () { 
 
+  $(".removeK").click(function (event) {
+   let term2 = $("input:checkbox:checked").val()
+   $("input:checkbox:checked").closest("li").remove();
+   console.log("ok1")
+        event.preventDefault();
+      
+  //event.preventDefault()
+  $(".wordIn").empty();
+    $.ajax({
+      type: "DELETE", 
+      data: term2,
+      url: "http://localhost:8080/api/term/delete/word/" + term2 ,
+     
+      contentType: "application/json",
+      data: JSON.stringify(term2),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      console.log(data);
+   
+    });
+    
+  
+  });
+  });
+  
 
 $(document).ready(function () {
   $(".addWordF").click(function (event) {
@@ -195,7 +340,7 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function () {
-  $(".addWord").click(function (event) {
+  $(".addWordK").click(function (event) {
         //e.preventDefault();
     
     var formData = {
@@ -243,8 +388,6 @@ $(document).ready(function () {
 
   });
 });
-
-
 function removeWord() {
     const checkboxes = document.querySelectorAll('.checkbox:checked');
     Array.prototype.forEach.call(checkboxes, function(checkbox) {
@@ -257,11 +400,14 @@ function addWordPK(){
     let newWord = document.querySelector(".addNewPKWord");
     let word = document.getElementById("wordPK").value;
     let input = document.createElement("input");
+    
    input.setAttribute("type","checkbox");
    input.setAttribute("value", word);
    input.classList.add("checkbox");
+
    input.id = word;
    let label = document.createElement("label");
+
     let li = document.createElement('li');
    li.className = `list-group-item ${word} `  ;
 
@@ -278,14 +424,12 @@ function addWordPK(){
    input.setAttribute("value", word);
    input.classList.add("checkbox");
    input.id = word;
-   let label = document.createElement("label");
     let li = document.createElement('li');
    li.className = `list-group-item ${word} `  ;
 
    li.innerHTML = word;
    new1 = newWord.appendChild(li);
-   new2 = new1.appendChild(label);
-   new3 = new2.appendChild(input);
+   new2 = new1.appendChild(input);
    }
 
  function addWordF(){

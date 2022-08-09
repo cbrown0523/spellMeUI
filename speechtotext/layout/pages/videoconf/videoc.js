@@ -48,7 +48,7 @@ function fire_ajax_submit() {
           
             //$('#p10').html(`<a href = ${data.local_results.places[0].website}></a>`);
           
-            $('#p11').html(`<a id= "link1 " href = ${data.local_map.link}>Find Tutor</a>`);
+            $('#p11').html(`<a id= "link1 " href = ${data.local_results.more_locations_link}>Find Tutor</a>`);
             $('#p12').html(`<img src=${data.local_map.image} "height = "450px" width = "400px">`);
 
 
