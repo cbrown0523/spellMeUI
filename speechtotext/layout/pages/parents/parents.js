@@ -1,12 +1,16 @@
 $.ajax({
   method:'GET',
   url: 'http://localhost:8080/api/learner/all',
+  headers: {
+    Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+},
   dataType: 'json'
 }).done(function(data){
   console.log(data);
   $.map(data, function(learners , i ){
-      $('#list1').append("<a style = 'text-decoration: none;' href = ''><li class='list-group-item'>" + learners.name + "</li></a>"
+      $('#list1').append("<a style = 'text-decoration: none' href = ''><li class='list-group-item'>" + learners.name + "</li></a>"
       )
+      
      })
   
 })
@@ -30,7 +34,7 @@ $.ajax({
 
 
 $(document).ready(function () {
-  $("form").submit(function(event) {
+  $("#add").click(function(event) {
     var formData = {
       name: $("#name").val(),
       grade: $("#grade").val()
@@ -39,6 +43,9 @@ $(document).ready(function () {
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/api/learner/",
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
       data: formData,
       contentType: "application/json",
       data: JSON.stringify(formData),
@@ -49,7 +56,6 @@ $(document).ready(function () {
       console.log(data);
     });
 
-   
   });
 });
 
@@ -102,20 +108,58 @@ $(document).ready(function () {
 //     });
 
 //  }
+$(document).ready(function () {
+  $("#delete").click(function(event) {
+    var formData = {
+      name: $("#nameDel").val(),
+    };
+   
 
-$(".list-group-item").dblclick(function (event) {
-  let name = $(this).attr('.list-group-item');
-$.ajax({
-    type: "DELETE",
-    url: "http://localhost:8080/api/learner/delete/name/?name=" + name,
-    contentType: "application/json",
-    data: name,
-    dataType: "json",
-    encode: true,
-  }).done(function (data) {
-    $('#list1').trigger("reset");
-    console.log(data);
+    $.ajax({
+      type: "DELETE",
+      url: "http://localhost:8080/api/learner/delete/name/" + formData.name,
+            headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
+      data: formData,
+      contentType: "application/json",
+      data: JSON.stringify(formData),
+      dataType: "json",
+      encode: true,
+    }).done(function (data) {
+      $('#list1').trigger("reset");
+      console.log(data);
+    });
+
   });
-
-
 });
+
+
+// $(document).ready(function(event){
+//   $(".list-group-item").click(function(){
+//     $(this).hide();
+//  // let name = event.target.className;
+//  alert(event.target.className);
+// $.ajax({
+//     type: "DELETE",
+//       headers: {
+//         Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+//     },
+//     url: "http://localhost:8080/api/learner/delete/name/?name=" + name,
+//     contentType: "application/json",
+//     data: name,
+//     dataType: "json",
+//     encode: true,
+//   }).done(function (data) {
+//     $('#list1').trigger("reset");
+//     console.log(data);
+//   });
+
+// });
+// });
+// $(document).on("click", function(event){
+//   $(this).hide();
+//   event.preventDefault()
+// //event.target.className.hide();
+  
+// })

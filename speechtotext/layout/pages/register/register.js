@@ -23,7 +23,7 @@ $(document).ready(function() {
     //event.preventDefault()
       $.ajax({
         type: "POST",
-        url: " http://localhost:8080/api/user/",
+        url: "http://localhost:8080/api/user/",
         data: formData,
         contentType: "application/json",
         data: JSON.stringify(formData),
@@ -35,7 +35,55 @@ $(document).ready(function() {
   
     });
   });
+  //signup, in, new learner 
+// var username =  $("#name").val();
 
+// var password = $("#InputEmail").val();
+
+// function make_base_auth(user, password) {
+//   var tok = user + ':' + password;
+//   var hash = Base64.encode(tok);
+//   return "Basic " + hash;
+// }
+// $.ajax
+//   ({
+//     type: "POST",
+//     url: "http://localhost:8080/api/user/",
+//     dataType: 'json',
+//     async: false,
+//     data: '{"name": "' + username + '", "email" : "' + password + '"}',
+//     success: function (){
+//     alert('Thanks for your comment!');
+//     }
+// });
+
+// $(document).ready(function() {
+//   $("form").submit(function (event) {
+//        // e.preventDefault();
+    
+//        var username =  $("#name").val();
+
+//        var password = $("#InputEmail").val();
+       
+//        function make_base_auth(user, password) {
+//          var tok = user + ':' + password;
+//          var hash = Base64.encode(tok);
+//          return "Basic " + hash;
+//        }
+//        $.ajax
+//          ({
+//            type: "POST",
+//            url: "http://localhost:8080/api/user/",
+//            dataType: 'json',
+//            async: false,
+//            data: '{"username": "' + username + '", "password" : "' + password + '"}',
+//            success: function (){
+//            alert('Thanks for your comment!');
+//            }
+//        });
+
+//   });
+// });
 // $(document).ready(function () {
 //       $("form").submit(function (event) {
 //         //e.preventDefault();

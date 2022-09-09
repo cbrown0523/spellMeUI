@@ -6,17 +6,22 @@ let count = 0
 $.ajax({
   method:'GET',
   url: 'http://localhost:8080/api/term/',
+  headers: {
+    Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+},
   async: false,
   dataType: 'json'
 }).done(function(data){
   console.log(data);
   words = data;
+  
   $('#spellWord').html( "<p id = 'spellWord'>" + words[count]["term"]  +"</p>")  
 })
 
 //button right
 $(document).ready(function(){
   $(".ar").click(function(){
+    $("#coverimg").hide()
     console.log(words[++count]["term"] )
     console.log("up" + count)
    
@@ -36,6 +41,7 @@ $(document).ready(function(){
   //button left
  
   $(".al").click(function(){
+    $("#coverimg").hide()
     console.log(words[--count]["term"] )
       console.log("down" + count)
       $('form').trigger("reset");
@@ -50,6 +56,9 @@ let getImage = function (){
 $.ajax({
 method: "GET",
 url: 'http://localhost:8080/image/' ,
+headers: {
+  Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+},
 // async: false,
 
 data: { 
@@ -87,6 +96,9 @@ $('form').submit();
         $.ajax({
           type: "POST",
           url: "http://localhost:8080/api/spell/",
+          headers: {
+            Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+        },
           data: formData,
           contentType: "application/json",
           data: JSON.stringify(formData),

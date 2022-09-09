@@ -89,6 +89,9 @@ $(".wordIn").empty();
     type: "DELETE", 
     data: term,
     url: "http://localhost:8080/api/term/delete/word/" + term ,
+    headers: {
+      Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+  },
    
     contentType: "application/json",
     data: JSON.stringify(term),
@@ -140,6 +143,9 @@ $(".wordIn").empty();
         type: "DELETE", 
         data: term3,
         url: "http://localhost:8080/api/term/delete/word/" + term3 ,
+        headers: {
+          Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+      },
        
         contentType: "application/json",
         data: JSON.stringify(term3),
@@ -194,6 +200,9 @@ console.log("ok")
       type: "DELETE",
     
       url: "http://localhost:8080/api/term/delete/word/" + term ,
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
         data: term,
       contentType: "application/json",
      data: JSON.stringify(term),
@@ -222,6 +231,9 @@ let term = $("#wordPK").val()
       type: "DELETE",
     
       url: "http://localhost:8080/api/term/delete/word/" + term ,
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
         data: term,
       contentType: "application/json",
      data: JSON.stringify(term),
@@ -243,6 +255,9 @@ let term = $("#wordF").val()
       type: "DELETE",
     
       url: "http://localhost:8080/api/term/delete/word/" + term ,
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
         data: term,
       contentType: "application/json",
      data: JSON.stringify(term),
@@ -299,6 +314,9 @@ $(document).ready(function () {
       type: "DELETE", 
       data: term2,
       url: "http://localhost:8080/api/term/delete/word/" + term2 ,
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
      
       contentType: "application/json",
       data: JSON.stringify(term2),
@@ -328,6 +346,9 @@ $(document).ready(function () {
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/api/term/",
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
       data: formData,
       contentType: "application/json",
       data: JSON.stringify(formData),
@@ -352,6 +373,9 @@ $(document).ready(function () {
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/api/term/",
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
       data: formData,
       contentType: "application/json",
       data: JSON.stringify(formData),
@@ -377,6 +401,9 @@ $(document).ready(function () {
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/api/term/",
+      headers: {
+        Authorization: 'Bearer ' + "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiQGIuY29tIiwiaWF0IjoxNjYxMjM0ODI0fQ.Y9CCUzHksscuPZNfYSOWDBI_6UGy-_qyZBToobX-13ulZu0Fda24lLBM0W4XnfaeFHxdoTVX6UUGPZJ4BI6twg"
+    },
       data: formData,
       contentType: "application/json",
       data: JSON.stringify(formData),
