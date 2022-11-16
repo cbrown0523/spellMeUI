@@ -1,7 +1,6 @@
-body{
+#spellWord{
     font-family: 'Indie Flower', "cursive";
-    font-size: 20px;
-    font-weight: bold;
+     
 }
 .al{
     margin:auto
@@ -39,9 +38,8 @@ body{
 }
 
 .imgbg{
-    background-image: url("../../../spellmeApp/assets/bg1.jpg");
-  
-   
+    background-image: url("/speechtotext/assets/bg1.jpg");
+    height:200px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,4 +58,10 @@ body{
      margin-right:125px;
      position:relative;
      bottom:20px
+}
+.defTxt{
+    text-align: center;
+}
+.footer1{
+    font-family: 'Rubik', sans-serif;
 }

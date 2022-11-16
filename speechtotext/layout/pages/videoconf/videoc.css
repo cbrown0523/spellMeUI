@@ -1,0 +1,19 @@
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    
+}
+.link1 > a:hover {
+    color: rgb(253, 137, 4);
+    font-size: 22px;
+  }
+  .container1{ 
+    background: linear-gradient(90deg, rgba(15,81,202,1) 0%, rgba(75,124,214,1) 29%, rgba(242,239,239,1) 100%);
+}
+#link1 {
+    font-size: 22px;
+    color:black !important
+}
+.main1{
+    padding-top: 100px;
+}

@@ -16,54 +16,58 @@
 <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
   crossorigin="anonymous"></script>
+  <script src = "spellMeUtterence.js"></script>
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>spell me page</title>
+  <script src = spellme.js></script>  
+  <title>spell me page</title>
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg" style= "background-color: #78b0f0;">
+        <nav class="navbar navbar-expand-lg footer1" style= "background-color: #78b0f0;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    Bootstrap
+                <a class="navbar-brand" href="../main/index.html">
+                    <img src="/speechtotext/assets/logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Spell Me
                   </a>
               <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Parent</a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../main/index.html">Home</a>
+                    </li>
+                    <a class="nav-link active" aria-current="page" href="../parents/parents.html">Parent</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="../videoconf/videoc.html">Tutor</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="../wordList/wordList.html">WordList</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
           <div class="container ">
-  <div class="row  my-5 "  >
-    <div class="col al ">
-     <img class = "" src = "../../../spellmeApp/assets/al.png" height = "100px" width = "100px;">
+  <div class="row  my-4 "  >
+    <div class="col al " onclick="submitForm()">
+     <img id = "" src = "../../../assets/al.png" height = "100px" width = "100px;">
     </div>
  
-    <div class="col-6 img1 border border-5 border-dark">
-      <img src = "../../../spellmeApp/assets/apple.jpg" height = "300px" width = "300px;">
+    <div class="col-6 img1 border border-5 border-dark"  >
+      <div class = 'img2'></div>
+      <img src = "../../../assets/READYSETGO.png" id = "coverimg" height = "300px" width = "300px;">
     </div>
-    <div class="col ar ">
-      <img  class =" " src = "../../../spellmeApp/assets/ar.png"  height = "100px" width = "100px;">
+    <div class="col ar " onclick="submitForm()" >
+      <img  class =" " src = "../../../assets/ar.png"  height = "100px" width = "100px;">
     </div>
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+      <!-- 1 of 3 -->
     </div>
     <div class="col-6 displayW">
-    <p id = "spellWord">Apple</p>
+    <p id = "spellWord"></p>
     </div>
     <!-- <div class="col-2">
      
@@ -73,31 +77,48 @@
       
        <img id="icon2" src = "../../../spellmeApp/assets/aid.png" width = "60px" height = "60px"></div> -->
     <div class = "col ">
-      <img class = "icon1" id="icon1" src = "../../../spellmeApp/assets/aid.png" width = "50px" height = "50px">
-      <img class = "icon2" id="icon1" src = "../../../spellmeApp/assets/mp.png" width = "50px" height = "50px">
+      
+        <img onclick="say()" class = "icon2" id="icon2" src = "../../../assets/mp.png" width = "50px" height = "50px"> 
+      
     </div>
   </div>
   <div class= "imgbg">
   <div class="row ">
     <div class="col-3 ">
-      1 of 3
+      <!-- 1 of 3 -->
     </div>
     <div class="col-6  ">
+      <form  id ="formu1"  >
       <div class="form-floating mb-3  textbox1">
-        <input type="text" class=" form-control-sm wordIn" id="floatingInput" placeholder="word">
+        <input oninput="myFunction1()" type="text" autocomplete="off" class=" form-control-sm wordIn" id="floatingInput" autofocus style="background-color: aqua;"/>
         <label for="floatingInput"></label>
-      </div>
+        <input type="hidden" id = "hid" value="">
+  </div>
+    </form>
     </div>
     <div class="col-3">
-      1 of 3
+      <!-- 1 of 3 -->
     </div>
   
    </div>
    
   </div>
 </div>
+<div class="col defTxt" >
     </div>
-    
+    <div>
+      <nav class="navbar navbar-expand-lg footer1" style= "background-color: #f0bfdf;">
+        <div class="container-fluid">
+          <p>Spell Me</p>
+            <p>@Copyright : Christine Brown </p>
+            <span>Created 2022</span>
+          
+        </div>
+      </nav>
+ 
+</div>
+    </div>
+
      
 </body>
 </html>

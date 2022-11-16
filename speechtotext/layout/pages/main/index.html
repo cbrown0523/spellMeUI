@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> 
+   <!--favicon -->
+   <link rel="icon" href="/speechtotext/assets/logo.jpg" type="image/jpg" height = "16px" width = "16px">
+    <link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"> 
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- google fonts -->
@@ -19,33 +21,35 @@
   integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
   crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>spellMe</title>
+  <script src = 'main.js'></script> 
+
+   </style>
 </head>
 <body>
     <audio id="audio">
-        <source src="./assets/mouseclick.mp3" type="audio/mp3"></source>
+        <source src="../../../assets/mouseclick.mp3" type="audio/mp3"></source>
     </audio>
     <div class="container">
     
-        <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+        <nav class="navbar navbar-expand-lg footer1" style= "background-color: #f0bfdf;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                    Bootstrap
+                <a class="navbar-brand" href="../main/index.html">
+                    <img src="/speechtotext/assets/logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Spell Me
                   </a>
               <div class="collapse navbar-collapse d-flex flex-column align-items-end" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Parent</a>
+                    <a class="nav-link active" aria-current="page" href="../parents/parents.html">Parent</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="../register/register.html">Register</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="../videoconf/videoc.html">Tutor</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link " href = "../wordList/wordList.html " >Word List</a>
                   </li>
                 </ul>
               </div>
@@ -59,42 +63,54 @@
             <div class="col-3" style= "background-color: #f8ecb3;">
                 <div >
                 <div class="container user_name ">
-                   <div class = nmeList> 
-                        <p class= "user_name_label">Name</p> 
+                   <div class = nmeList > 
+                        <p class= "user_name_label">Learner</p> 
                         <div class = "usernme">
-                <a><p>christine</p></a>
-                <a><p>amy </p></a>
             </div>
-            </div>  
-                <img class= "note" src = "./assets/note1.jpg" width="250em">
+            </div>
+              <div class = "note">
+                <img  src = "../../../assets/note1.jpg" width="250em" height="370px">
                
-            <img src="./assets/pencil1.png" id = "img1" height="200px">
+            <img src="../../../assets/pencil1.png" id = "img1" height="200px">
             </div>
+          </div>
         </div>
         </div>
             <div class="col-9" style= "background-color: #1ca823;">
                 <h1 class="title">Grow. Explore. Discover </h1>
 
-           <a><img src = "./assets/abcblock.jpg" id= "img2" height = "300em"></a>
+           <a href = "../spellme/spellme.html"><img src = "../../../assets/abcblock.jpg" id= "img2" height = "300em"></a>
            <div class = "jqueryelm">
-          <a> <img src = "./assets/arrow.png" id = "jqueryimg1" height = "100px" width = "100px" >  </a> 
+          <a> <img src = "../../../assets/arrow.png" id = "jqueryimg1" height = "100px" width = "100px" >  </a> 
 </div>
 </div>
         </div>
             
       </div>
+    
+
+      <div class = "footer1">
+        <nav class="navbar navbar-expand-lg" style= "background-color: #f0bfdf;">
+          <div class="container-fluid">
+            <p>Spell Me</p>
+              <p>@Copyright : Christine Brown </p>
+              <span>Created 2022</span>
+            
+          </div>
+        </nav>
+   
 </div>
-<script> 
-  
+</div>
+<script>
   $(document).ready(function(){
       setInterval(() => {
           var div = $("#jqueryimg1");
-    div.animate({top: '-10px', opacity: '0.9'}, "slow");
-    div.animate({bottom: '50px', opacity: '0.8'}, "slow");
-    div.animate({top: '50px', opacity: '0.6'}, "slow");
-    div.animate({bottom: '5px', opacity: '0.8'}, "slow");
+    div.animate({top: '10px', opacity: '0.9'}, "slow");
+    div.animate({bottom: '20px', opacity: '0.8'}, "slow");
+    div.animate({top: '25px', opacity: '0.6'}, "slow");
+    div.animate({bottom: '15px', opacity: '0.8'}, "slow");
     div.animate({top: '10px', opacity: '0.6'}, "slow");
-    div.animate({bottom: '50px', opacity: '0.8'}, "slow"); 
+    div.animate({bottom: '30px', opacity: '0.8'}, "slow"); 
     div.animate({top: '15px'}, "slow"); 
 
       }, 2000);
@@ -111,6 +127,9 @@ $("a").click(function() {
 });
     });
     </script>
+    
+
+
       
 </body>
 </html>

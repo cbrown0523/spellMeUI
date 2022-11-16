@@ -1,0 +1,9 @@
+.img1{
+    background-image: url("/speechtotext//assets/giphy.gif");
+    background-repeat: no-repeat;
+position:relative;
+left: 700px;
+    height:700px;
+    width:800px;
+    margin: auto;
+}
